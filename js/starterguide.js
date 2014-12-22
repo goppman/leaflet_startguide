@@ -9,7 +9,7 @@ var map = L.map('map').setView([ 39.769113, -86.158895], 11);
 		}).addTo(map);
 
 //left location for Messer Construction
-  L.marker([ 39.896091, -86.048474],clickable).addTo(map)
+  L.marker([ 39.896091, -86.048474],).addTo(map)
 			 .bindPopup("<b>Messer Construction</b><br />Left this location.");
 
 
@@ -22,13 +22,6 @@ var map = L.map('map').setView([ 39.769113, -86.158895], 11);
 //
 // created an onclick function to start line animation when a marker is clicked.
   function onClick(e){
-
-    click(function(){
-      if (e){
-        return setTimeout();
-      }
-
-    });
 
 
       if (map.tap) map.tap.disable();
