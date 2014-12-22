@@ -26,10 +26,13 @@ var map = L.map('map').setView([ 39.769113, -86.158895], 11);
  	var newLine;
 
 	function deleteLine (e) {
-	  if (newLine != undefined) {
+		  if (newLine != undefined) {
+					e.markerA.removeLayer(newLine);
+			}else{
 
-				markerA.removeLayer(newLine);
-	  };
+				e.markerA.on('click', onClick);
+			};
+
 	};
 
 
